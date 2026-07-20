@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://api.domesystems.ai/.well-known/oauth-authorization-server +
+  https://login.domesystems.ai/.well-known/openid-configuration +
+  https://www.domesystems.ai/llms.txt
+summary:
+  types: [oauth2, openIdConnect, apiKey]
+  oauth2_flows: [clientCredentials, authorizationCode, deviceCode, refreshToken]
+  api_key_in: [header]
+schemes:
+- name: PlatformOAuth2
+  type: oauth2
+  description: Machine-to-machine access to the Dome API.
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.domesystems.ai/api/v1/auth/token
+    token_endpoint_auth: client_secret_basic
+  issuer: https://api.domesystems.ai
+  jwks_uri: https://api.domesystems.ai/.well-known/jwks.json
+  source: https://api.domesystems.ai/.well-known/oauth-authorization-server
+- name: DomeLogin
+  type: openIdConnect
+  description: User/operator single sign-on for the Dome console and CLI, fronted by WorkOS.
+  issuer: https://login.domesystems.ai
+  authorization_endpoint: https://login.domesystems.ai/oauth2/authorize
+  token_endpoint: https://login.domesystems.ai/oauth2/token
+  device_authorization_endpoint: https://login.domesystems.ai/oauth2/device_authorization
+  userinfo_endpoint: https://login.domesystems.ai/oauth2/userinfo
+  introspection_endpoint: https://login.domesystems.ai/oauth2/introspection
+  jwks_uri: https://login.domesystems.ai/oauth2/jwks
+  grant_types: [authorization_code, client_credentials, refresh_token, 'urn:ietf:params:oauth:grant-type:device_code']
+  id_token_signing_alg: [RS256]
+  source: https://login.domesystems.ai/.well-known/openid-configuration
+- name: AgentAPIKey
+  type: apiKey
+  in: header
+  description: >-
+    Per-agent API keys issued at registration (the credential root of trust). The CLI
+    issues and rotates agent API keys; these authenticate an agent's calls through the
+    Gateway and Broker.
+  source: https://www.domesystems.ai/llms.txt
