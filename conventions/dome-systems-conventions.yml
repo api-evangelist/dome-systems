@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.domesystems.ai/llms.txt + well-known OAuth/OIDC metadata
+authentication:
+  style: oauth2 + api-key
+  detail: >-
+    Machine-to-machine via OAuth2 client_credentials at api.domesystems.ai; operator SSO via
+    OpenID Connect (WorkOS) at login.domesystems.ai; per-agent API keys issued at registration.
+  see: authentication/dome-systems-authentication.yml
+versioning:
+  style: uri-path
+  current: v1
+  see: lifecycle/dome-systems-lifecycle.yml
+authorization:
+  model: cedar-policy
+  detail: >-
+    Cedar rules evaluated at the call boundary, fail-closed and forbid-wins by default, scoped at
+    org / tenant / workspace / agent. Rules are simulated against replayed traffic and shipped
+    versioned through CI/CD.
+audit:
+  detail: >-
+    Every governed action (Registry / Gateway / Broker) emits an immutable audit event with a single
+    vocabulary: agent, caller chain, tool or model, arguments, policy version, and outcome. Streamed in
+    real time to SIEM / APM / SOAR / lakehouse / compliance stores.
+scoping:
+  levels: [org, tenant, workspace, agent]
+idempotency:
+  supported: unknown
+  note: No idempotency-key contract is documented on the public surface; not asserted.
+pagination:
+  style: unknown
+  note: No public OpenAPI or docs available to confirm pagination conventions.
+notes:
+- Cross-cutting semantics reconstructed from the company llms.txt and published well-known metadata; the operation-level contract lives behind access-gated docs.

@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://api.domesystems.ai/.well-known/oauth-authorization-server +
+  https://github.com/dome-systems/releases/releases
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: API paths are namespaced under /api/v1/ (e.g. token endpoint https://api.domesystems.ai/api/v1/auth/token).
+cli_versioning:
+  scheme: semver
+  current: 0.1.3
+  releases: https://github.com/dome-systems/releases/releases
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation policy or Sunset/Deprecation header support documented (product still pre-1.0, early access).
+sla:
+  url: null
+status_page: null
+notes:
+- No public status page (status.domesystems.ai does not resolve) — no StatusPage pointer emitted.
+- No public deprecation policy — no Deprecation pointer emitted.
+- Dome is in weekly-admission early access; the platform API version is v1 while the CLI is on the 0.1.x train.

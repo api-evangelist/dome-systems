@@ -1,0 +1,81 @@
+# Dome Systems
+
+> The enterprise agentic operations platform — connect, secure, and operate AI agents across every runtime, every cloud.
+
+Dome Systems is the system of control for the agent era. Enterprises are adopting AI agents faster than their existing governance can keep up — RBAC, API gateways, and audit logs were built for software that follows fixed paths, not for reasoning systems that decide what to do at runtime. Dome closes that gap with one platform that registers every agent, governs every tool and model call against policy, and produces an immutable audit trail across the entire estate, regardless of where the agent runs (cloud, SaaS, data platform, developer laptop) or who built it (your team, a vendor, an end user).
+
+The product is the **Dome Platform**: three control points — **Registry** (code), **Gateway** (tools), **Broker** (models) — on a control plane of **Authorization** and **Audit**, administered through SDKs, an API, a CLI, and an MCP surface that exposes Dome itself to AI assistants.
+
+## What Dome Does
+
+The platform is organized as a five-step workflow that every agent passes through, regardless of surface:
+
+- **Register**: Every agent gets a registry record — name, owner, workspace, tier — and a managed lifecycle (provisioned, active, suspended, revoked). The credential issued at registration is the root of trust for everything that follows.
+- **Attach Tools**: Backends (MCP servers, REST APIs, internal services) are attached to the Tool Gateway. Tools surface into a per-agent catalog, filtered by policy, with credentials injected at egress and responses filtered before they reach the agent.
+- **Connect Models**: Model providers (Anthropic, OpenAI, Bedrock, self-hosted) are configured at the Broker, optionally composed into pools for failover or cost routing. Per-call policy and credential injection apply at the model boundary, with a uniform audit vocabulary across providers.
+- **Authorize Calls**: Cedar rules are defined at the right scope (org, tenant, workspace, agent), simulated against replayed traffic, and shipped versioned through CI/CD. Authorization is fail-closed and forbid-wins by default — policy that enforces, not policy that asks.
+- **Observe Events**: Every governed action emits an immutable audit event with full context: agent, caller chain, tool or model, arguments, policy version, outcome. Streamed in real time to SIEM, APM, SOAR, lakehouse, or compliance store.
+
+## Platform
+
+The product, broken down by component. Each page covers what the component does, how it integrates, and what it looks like in practice.
+
+- [Platform overview](https://domesystems.ai/platform): The Dome Platform — three control points (Registry, Gateway, Broker) on a control plane of access, authorization, and audit. The architectural model and how the pieces compose.
+- [Agent Registry](https://domesystems.ai/platform/registry): The system of record for every agent. Registration, capability declaration, lifecycle states, tier-based defaults, and the credential root of trust for downstream calls.
+- [Tool Gateway](https://domesystems.ai/platform/gateway): The enforcement point for every tool call an agent makes. Backend attachment, per-call policy, credential injection at egress, response filtering, and a single governed path for every API, MCP server, or internal service an agent can reach.
+- [Model Broker](https://domesystems.ai/platform/broker): The enforcement point for every model call. OpenAI- and Anthropic-compatible API surface, per-call policy, credential injection, pool composition for failover and cost routing, and a uniform audit vocabulary across providers.
+- [Authorization](https://domesystems.ai/platform/authorization): Cedar policy evaluated at the call boundary on the platform itself — fail-closed, forbid-wins, across four scopes (org, tenant, workspace, agent). Includes simulation against replayed traffic and versioned rollout.
+- [Audit](https://domesystems.ai/platform/audit): Immutable events across all three control points, with one vocabulary. Full context — agent, caller chain, target, policy version, outcome — streamed to existing observability and compliance systems.
+- [Operator surfaces](https://domesystems.ai/platform/operator): How developers and platform teams drive the platform. SDKs (Go, Python), CLI, REST API, and an MCP surface that exposes Dome itself to AI assistants for triage and review.
+- [Manage](https://domesystems.ai/manage): Org-down administration. Tenants, workspaces, defaults, per-scope overrides, and data-residency controls (e.g. pinning EU traffic to EU regions).
+- [Integrations](https://domesystems.ai/integrations): How Dome composes with the systems already in production — IdPs, secrets stores, observability platforms, and CI/CD pipelines. The principle is to integrate outward rather than replace.
+
+## Solutions
+
+How enterprises actually use Dome. Three lenses: the pattern (who is using agents), the team (who owns the work), and the specific use case.
+
+**By pattern** — the two shapes of agent activity in the enterprise:
+
+- [Agent Consumer](https://domesystems.ai/solutions/agent-consumer): The enterprise *consumes* agents from every layer of the stack — desktop assistants (Claude, Cursor), SaaS-embedded agents (Writer, Harvey), data platform agents (Salesforce, Snowflake), cloud-platform agents (AWS, Azure, GCP), and AI-vendor agents. Dome governs the estate consistently across all of them.
+- [Agent Provider](https://domesystems.ai/solutions/agent-provider): The enterprise *ships* agents — its own customers and partners are now driving its APIs with agents. Two surfaces to operate (developer-facing API, agent-facing tool) over one backend. Dome provides the agent-facing surface, policy, and audit.
+
+**By team** — the persona-level entry points:
+
+- [For Security / CISOs](https://domesystems.ai/solutions/for/security): Authentication for every agent, policy as code, audit that records decisions and not just events. Governing the agentic estate the way you already govern the rest of the stack: authentication, authorization, audit, attribution.
+- [For Platform Teams](https://domesystems.ai/solutions/for/platform-teams): Be the path of least resistance to governed agent deployment. One operations layer across the estate, composed with the systems platform teams already operate. Self-service for builders without losing the audit trail.
+- [For Finance](https://domesystems.ai/solutions/for/finance): Levers to bend the cost curve as token consumption scales. Model brokering for routing on cost and policy, token visibility per agent and per workflow, tool consolidation, and exportable audit evidence for compliance.
+
+**By use case** — concrete starting points:
+
+- [Onboard agents](https://domesystems.ai/solutions/use-cases/onboard-agents): One Dome tenant, one registry record per agent, one place to look — for every agent the team builds and every agent customers run against the enterprise.
+- [Consolidate tool access](https://domesystems.ai/solutions/use-cases/consolidate-tool-access): One gateway across every tool call. Limit access, enforce policy, and audit every action without rewriting the tools or the agents.
+- [Broker model access](https://domesystems.ai/solutions/use-cases/broker-model-access): Route model traffic on cost, policy, and availability without changing the agent. One broker, many providers, one place to evaluate.
+
+## Perspectives — long-form arguments
+
+The framework underneath Dome's positioning. Each article has both a web version and a downloadable PDF.
+
+- **[Another Governance Layer, Again](https://domesystems.ai/perspectives/governance-layer)** ([PDF](https://domesystems.ai/papers/governance-layer.pdf)) — The anchor paper. Every enterprise computing era produces a new governance layer purpose-built for its patterns of access and action. The agent era is no different, except the patterns are probabilistic, multi-runtime, and moving faster than any that came before. Defines the agent, maps the five surfaces where agents operate, names the governance gap, and proposes a Connect/Secure/Operate blueprint.
+- **[Toward Enterprise Agentic Operations](https://domesystems.ai/perspectives/enterprise-agentic-operations)** ([PDF](https://domesystems.ai/papers/enterprise-agentic-operations.pdf)) — A maturity model for agentic adoption: Experimental → Adopting → Standardizing. What each stage looks like, the cost and risk profile of staying in it, and the operational shifts that produce the standardized stage. The executive-facing companion to the anchor paper.
+- **[The New Shadow IT](https://domesystems.ai/perspectives/velocity-engineering)** — How "velocity engineering" (non-engineers building functional agents with LLMs in hours) creates structural governance tension, why restriction fails as a response, and why the answer is consistent operations rather than blocking. The cultural and organizational lens on the same problem.
+- **[The Scarcity Isn't Code Anymore](https://domesystems.ai/perspectives/economic-argument)** — As code production commoditizes, value migrates to governance — the management plane that SaaS vendors used to bundle and that enterprises now have to provide themselves. The economic argument for treating governance as a durable platform.
+- [Index of all perspectives](https://domesystems.ai/perspectives)
+
+## Company
+
+- **Founded**: 2024
+- **Founders**: Dave McJannet (CEO, former CEO of HashiCorp) and Marc Holmes (COO, former VP Marketing at HashiCorp and Docker)
+- **Investors**: Redpoint Ventures, Bessemer Venture Partners, Mango Capital
+- **Website**: https://domesystems.ai
+- **Documentation**: https://docs.domesystems.ai
+- **About the company**: https://domesystems.ai/about
+- **Contact**: hello@domesystems.ai
+
+## Optional
+
+- [Get started](https://domesystems.ai/get-started): Early-access onboarding form. Dome is admitting teams weekly.
+- [Contact](https://domesystems.ai/contact): General inquiries.
+- [Careers](https://domesystems.ai/careers): Open roles.
+- [Subscribe](https://domesystems.ai/subscribe): Updates from Dome.
+- [Privacy](https://domesystems.ai/privacy): Privacy policy.
+- [Terms](https://domesystems.ai/terms): Terms of use.

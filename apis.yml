@@ -1,22 +1,51 @@
 aid: dome-systems
 name: Dome Systems
-description: 'Dome Systems is a company surfaced as a portfolio company of bessemer-venture-partners,
-  redpoint-ventures and added to the API Evangelist network as a stub for enrichment. Sector: ai-ml. This
-  profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Dome Systems is the enterprise agentic operations platform — the system of control for
+  the agent era. Founded in 2024 by Dave McJannet (former HashiCorp CEO) and Marc Holmes,
+  and backed by Redpoint Ventures, Bessemer Venture Partners, and Mango Capital, Dome
+  registers every AI agent, governs every tool and model call against policy, and produces
+  an immutable audit trail across the estate — regardless of runtime, cloud, or who built
+  the agent. The Dome Platform is three control points — Registry (code), Gateway (tools),
+  and Broker (models) — on a control plane of Cedar-based Authorization and Audit,
+  administered through Go and Python SDKs, a REST API, a CLI, and a built-in MCP surface
+  that exposes Dome itself to AI assistants.
 url: https://raw.githubusercontent.com/api-evangelist/dome-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bessemer-venture-partners
 - redpoint-ventures
-x-tier: stub
+- mango-capital
+x-tier: enriched
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.domesystems.ai/favicon.ico
 tags:
 - Company
-- Ai Ml
+- AI Agents
+- Agent Governance
+- AI Operations
+- Authorization
+- Audit
+- MCP
+- Enterprise
+- Cedar Policy
+- LLM
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +55,62 @@ maintainers:
 common:
 - type: Website
   url: https://www.domesystems.ai/
+- type: DeveloperPortal
+  url: https://docs.domesystems.ai
+- type: Documentation
+  url: https://docs.domesystems.ai
+- type: APIReference
+  url: https://docs.domesystems.ai/api-reference
+- type: GettingStarted
+  url: https://domesystems.ai/get-started
+- type: Support
+  url: https://domesystems.ai/contact
+- type: Blog
+  url: https://domesystems.ai/perspectives
+- type: GitHubOrganization
+  url: https://github.com/dome-systems
+- type: SignUp
+  url: https://domesystems.ai/get-started
+- type: Login
+  url: https://login.domesystems.ai
+- type: TermsOfService
+  url: https://domesystems.ai/terms
+- type: PrivacyPolicy
+  url: https://domesystems.ai/privacy
+- type: Authentication
+  url: authentication/dome-systems-authentication.yml
+- type: Packages
+  url: packages/dome-systems-packages.yml
+- type: SDKs
+  url: packages/dome-systems-packages.yml
+- type: CLI
+  url: cli/dome-systems-cli.yml
+- type: MCPServer
+  url: mcp/dome-systems-mcp.yml
+- type: Sandbox
+  url: sandbox/dome-systems-sandbox.yml
+- type: ChangeLog
+  url: changelog/dome-systems-changelog.yml
+- type: Lifecycle
+  url: lifecycle/dome-systems-lifecycle.yml
+- type: Conventions
+  url: conventions/dome-systems-conventions.yml
+- type: Conformance
+  url: conformance/dome-systems-conformance.yml
+- type: LLMsTxt
+  url: llms/dome-systems-llms.txt
+- type: WellKnown
+  url: well-known/dome-systems-well-known.yml
+- type: SecurityTxt
+  url: well-known/dome-systems-security.txt
+- type: Security
+  url: https://www.domesystems.ai/.well-known/security.txt
+- type: VulnerabilityDisclosure
+  url: security/dome-systems-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/dome-systems-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/dome-systems/homebrew-tap + https://www.domesystems.ai/llms.txt
+packages:
+- language: cli
+  registry: homebrew
+  name: dome
+  tap: dome-systems/tap
+  url: https://github.com/dome-systems/homebrew-tap
+  install: brew install dome-systems/tap/dome
+  version: 0.1.3
+  license: Apache-2.0
+  official: true
+  note: First-party Dome Platform CLI binary, built with GoReleaser and distributed via the Homebrew tap and GitHub Releases.
+- language: cli
+  registry: github-releases
+  name: dome
+  url: https://github.com/dome-systems/releases/releases
+  install: 'download dome_<version>_<os>_<arch>.tar.gz from GitHub Releases'
+  version: 0.1.3
+  official: true
+- language: go
+  registry: unknown
+  name: Dome Go SDK
+  url: https://domesystems.ai/platform/operator
+  official: true
+  note: Documented first-party Go SDK on the Operator surfaces page; not located in a public package registry at probe time (docs behind access code).
+- language: python
+  registry: unknown
+  name: Dome Python SDK
+  url: https://domesystems.ai/platform/operator
+  official: true
+  note: Documented first-party Python SDK on the Operator surfaces page; not located in a public package registry at probe time (docs behind access code).

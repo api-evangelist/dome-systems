@@ -1,0 +1,11 @@
+{
+    "grant_types_supported": [
+        "client_credentials"
+    ],
+    "issuer": "https://api.domesystems.ai",
+    "jwks_uri": "https://api.domesystems.ai/.well-known/jwks.json",
+    "token_endpoint": "https://api.domesystems.ai/api/v1/auth/token",
+    "token_endpoint_auth_methods_supported": [
+        "client_secret_basic"
+    ]
+}

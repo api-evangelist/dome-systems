@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/dome-systems/releases/releases/tag/v0.1.0
+summary: >-
+  Dome provides developer sandbox environments that are provisioned through the
+  first-party CLI (the "Developer" command group). A sandbox lets a team exercise
+  agent registration, tool/model governance, policy, and audit without touching a
+  production tenant.
+provisioning:
+- surface: cli
+  command: dome sandbox
+  description: Provision and manage sandbox environments from the Dome Platform CLI.
+notes:
+- No published magic test values, test keys, or fixture credentials were found (product docs are behind an access code); none are invented here.
+- Sandbox provisioning is confirmed from the public v0.1.0 CLI release notes ("Developer — ... provision sandbox environments").

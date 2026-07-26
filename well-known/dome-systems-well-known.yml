@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ across Dome Systems hosts
+hosts:
+- host: https://www.domesystems.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: dome-systems-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://api.domesystems.ai
+  note: API host requires authorization (401) for most paths; the OAuth server metadata is public.
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: dome-systems-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+- host: https://login.domesystems.ai
+  note: Identity provider fronted by WorkOS.
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: dome-systems-workos-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+- host: https://docs.domesystems.ai
+  note: Docs (Mintlify) sit behind an access code; /.well-known probes return the access-code SPA (HTML 200), not real documents.
+  documents: []

@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/dome-systems/releases/releases
+subject: Dome Platform CLI (dome)
+scheme: semver
+current_version: 0.1.3
+entries:
+- version: 0.1.3
+  date: '2026-06-11'
+  breaking: false
+  highlights:
+  - LLM models, pools & quotas — dome model, dome model pool, dome model pool member, dome model quota.
+  - OAuth-backed models — dome model oauth-connect / oauth-disconnect.
+  - dome usage — durable LLM token usage and cost attribution from the CLI.
+  - dome agents register --file (JSON/YAML).
+  - Cleaner verbs (dome tool), context-aware commands, richer dome rules validate, branded login, auto-load .env.
+- version: 0.1.2
+  date: '2026-05-16'
+  breaking: true
+  highlights:
+  - Replaced the gateway command with model/tool commands.
+- version: 0.1.1
+  date: '2026-05-05'
+  breaking: false
+  highlights:
+  - Minor bug fixes; CLI/MCP alignment with the APIs.
+- version: 0.1.0
+  date: '2026-04-10'
+  breaking: false
+  highlights:
+  - First public release of the Dome Platform CLI.
+  - 'Connect: register/manage agents, issue/rotate agent API keys, configure gateway backends, browse tool catalogs.'
+  - 'Secure: author Cedar authorization rules, validate/deploy bundles, simulate decisions, rollback.'
+  - 'Operate: query, stream, and export audit events.'
+  - 'Developer: built-in MCP server for Claude and other MCP clients; provision sandbox environments.'
