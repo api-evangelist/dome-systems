@@ -6,13 +6,19 @@ server:
   name: dome
   transport: stdio
   launch: dome mcp
-  description: >-
-    The Dome Platform CLI ships a built-in MCP server that exposes Dome itself to
-    Claude and other MCP clients for triage and review of the agentic estate
-    (agents, tools, models, policy, and audit). Launched locally via `dome mcp`;
-    authenticated with the operator's Dome session.
-  clients: [Claude, other MCP clients]
+  description: The Dome Platform CLI ships a built-in MCP server that exposes Dome itself to Claude and
+    other MCP clients for triage and review of the agentic estate (agents, tools, models, policy, and
+    audit). Launched locally via `dome mcp`; authenticated with the operator's Dome session.
+  clients:
+  - Claude
+  - other MCP clients
 notes:
-- 'This is the "MCP surface" referenced across Dome''s positioning: Dome exposes its own control plane (Registry/Gateway/Broker/Authorization/Audit) to AI assistants.'
+- 'This is the "MCP surface" referenced across Dome''s positioning: Dome exposes its own control plane
+  (Registry/Gateway/Broker/Authorization/Audit) to AI assistants.'
 - No public hosted/remote MCP endpoint is advertised; the server runs from the first-party CLI over stdio.
 - Tool list is not published (docs are access-gated) and is not fabricated here.
+deployment:
+  mode: local-stdio
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
