@@ -3,12 +3,12 @@
   "feeds": [
     {
       "source": "https://domesystems.ai/contact",
-      "feed_url": "https://domesystems.ai/contact",
+      "feed_url": "https://www.domesystems.ai/feed.xml",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "discovered"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-09-06T19:17:18Z"
+  "fetched": "2026-09-13T13:00:00Z"
 }
