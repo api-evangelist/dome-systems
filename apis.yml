@@ -64,6 +64,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Pricing
+  url: https://www.domesystems.ai/pricing
+- type: Plans
+  url: plans/dome-systems-plans-pricing.yml
 - type: Website
   url: https://www.domesystems.ai/
 - type: DeveloperPortal
