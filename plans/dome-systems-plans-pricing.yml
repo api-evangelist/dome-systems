@@ -1,0 +1,55 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.domesystems.ai/pricing
+sources:
+- https://www.domesystems.ai/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T112025
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Tiered platform fees plus two usage meters (governed actions and tokens); Enterprise is negotiated.
+plan_count: 4
+currency: USD
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  currency: USD
+  period: month
+  unit: workspace
+  included_quota: Roughly 5000 governed actions per month, then a hard stop rather than a bill. Up to
+    5000 Act; Up to 100 MTok
+  overage: hard stop
+- name: Pro
+  price_text: $29 /workspace
+  price: 29
+  currency: USD
+  period: month
+  unit: workspace
+  included_quota: Billed as consumed.
+  overage: Per 1,000 Governed Actions (KAct) $1.719; Per 1M tokens $0.030
+- name: Team
+  price_text: $299 /month
+  price: 299
+  currency: USD
+  period: month
+  unit: month
+  included_quota: Unlimited access to the whole platform
+  overage: Per 1,000 Governed Actions (KAct) $1.433; Per 1M tokens $0.030
+- name: Enterprise
+  price_text: Custom
+  period: none
+  included_quota: Priced per organization against a prepaid commit, with volume discount pricing.
+  overage: Custom
+rate_limit_statements:
+- Roughly 5000 governed actions per month, then a hard stop rather than a bill.
+- Carded accounts get a visible default spend ceiling at four times the included usage, which you can
+  raise in one click.
