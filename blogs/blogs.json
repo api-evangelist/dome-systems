@@ -2,7 +2,7 @@
   "repo": "dome-systems",
   "feeds": [
     {
-      "source": "https://domesystems.ai/contact",
+      "source": "https://domesystems.ai/perspectives",
       "feed_url": "https://www.domesystems.ai/feed.xml",
       "title": "",
       "saved": 0,
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 9,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
