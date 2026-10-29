@@ -64,6 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Dome Systems is a company surfaced as a portfolio company of bessemer-venture-partners, redpoint-ventures and added to the API Evangelist network as a stub for enrichment. Sector: ai-ml. This profile is a lead awaiting the enrichment pipeline.
+Dome Systems is the enterprise agentic operations platform — the system of control for the agent era. Founded in 2024 by Dave McJannet (former HashiCorp CEO) and Marc Holmes, and backed by Redpoint Ventures, Bessemer Venture Partners, and Mango Capital, Dome registers every AI agent, governs every tool and model call against policy, and produces an immutable audit trail across the estate — regardless of runtime, cloud, or who built the agent. The Dome Platform is three control points — Registry (code), Gateway (tools), and Broker (models) — on a control plane of Cedar-based Authorization and Audit, administered through Go and Python SDKs, a REST API, a CLI, and a built-in MCP surface that exposes Dome itself to AI assistants.
 
-Backed by: bessemer-venture-partners, redpoint-ventures — https://www.domesystems.ai/
+**Areas:** Company · AI Agents · Agent Governance · AI Operations · Authorization · Audit · MCP · Enterprise · Cedar Policy · LLM
+
+## Dome Systems on APIs.io
+
+Everything profiled for Dome Systems is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dome-systems/](https://apis.io/providers/dome-systems/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [dome](https://apis.io/servers/dome-systems/dome/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dome Systems Authentication](https://apis.io/security/dome-systems/dome-systems-authentication/)
+- [Dome Systems Domain Security](https://apis.io/security/dome-systems/dome-systems-domain-security/)
+- [Dome Systems Vulnerability Disclosure](https://apis.io/security/dome-systems/dome-systems-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Dome Systems Plans Pricing](https://apis.io/plans/dome-systems/dome-systems-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.domesystems.ai/)
+- [Documentation](https://docs.domesystems.ai)
+- [Getting started](https://domesystems.ai/get-started)
+- [API reference](https://docs.domesystems.ai/api-reference)
+- [Pricing](https://www.domesystems.ai/pricing)
+- [Sign up](https://domesystems.ai/get-started)
+- [Support](https://domesystems.ai/contact)
+- [Blog](https://domesystems.ai/perspectives)
+- [Security](https://www.domesystems.ai/.well-known/security.txt)
+- [Terms of service](https://domesystems.ai/terms)
+- [Privacy policy](https://domesystems.ai/privacy)
+- [GitHub](https://github.com/dome-systems)
+
+## API Evangelist rating
+
+**Kin Score 42.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 76.3 |
+
+**Agent readiness 9.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 28.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dome-systems/](https://apis.io/providers/dome-systems/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Dome Systems: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dome-systems/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
